@@ -64,8 +64,6 @@ body {
 
 }
 .header {
-    padding-top: 24px;
-    padding-bottom: 24px;
     border-bottom: 1px solid #ECECEC;
 }
 .header-navigation {
@@ -83,14 +81,13 @@ body {
     justify-content: center;
 }
 .header-link {
+    display: block;
+    padding: 32px 0;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: color var(--transition);
     position: relative;
 
@@ -101,9 +98,9 @@ body {
     background: #2196F3;
     border-radius: 2px;
     height: 4px;
-    width: calc(100% + 8px);
-    top: 44px;
-    left: -4px;
+    width: 100%;
+    bottom: -1px;
+    left: 0;
 }
 .header-link:hover,
 .header-link:focus {
@@ -478,7 +475,7 @@ body {
     border-style: none;
     cursor: pointer;
     padding: 6px 22px;
-    transition: box-shadow var(--transition), background-color var(--transition);
+    transition: box-shadow var(--transition), background-color var(--transition), color var(--transition);
 }
 .filter-btn:hover,
 .filter-btn:focus {
@@ -559,7 +556,7 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
-    transition: opacity 500ms linear, visibility 500ms linear;
+    transition: opacity var(--transition), visibility var(--transition);
 }
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0);
@@ -576,7 +573,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform 500ms linear;
+    transition: transform var(--transition);
 }
 .modal-close {
     position: absolute;
